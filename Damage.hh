@@ -1,7 +1,8 @@
 //  Size: 0x34
 
-struct Damage
+class Damage
 {
+public:
     DamageType m_Type;                      // 0x0
     math::Vector m_ExplosionImpulse;        // 0x4
     int m_Damage;                           // 0x10
