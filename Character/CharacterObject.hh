@@ -1,6 +1,7 @@
-//  Size: * Unknown*
+//  Size:           0x384
+//  Total Size:     0x430
 
-class CharacterObject
+class CharacterObject : public InventoryOwner
 {
 public:
     int m_AlertStatus;                      // 0xAC
