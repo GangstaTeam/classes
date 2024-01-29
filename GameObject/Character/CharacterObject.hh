@@ -18,6 +18,7 @@ public:
     int m_DamageWeapon;                     // 0x17C
     int m_DamageDirection;                  // 0x180
 
+    uint32_t mLastVehicleID;                // 0x190
     uint32_t m_VehicleCollidingWithID;      // 0x194
 
     Character* m_CharacterEngineObject;     // 0x1AC
