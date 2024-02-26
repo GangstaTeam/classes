@@ -4,7 +4,7 @@
 class FlowManager
 {
 public:
-    FlowTime m_Time;                            // 0x0
+    FlowTime m_FlowTime;                        // 0x0
     unsigned int m_Unknown1;                    // 0x28
     unsigned int m_GameTimeInMiliseconds;       // 0x2C
     unsigned int m_Unknown2;                    // 0x30
