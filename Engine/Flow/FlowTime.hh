@@ -4,7 +4,7 @@ class FlowTime
 {
 public:   
     unsigned int uMicroseconds;                 // 0x0
-    unsigned int m_Unknown1;                    // 0x4
+    unsigned int uMilliseconds;                 // 0x4
     unsigned int m_Unknown2;                    // 0x8
     float fSeconds;                             // 0xC
     unsigned int m_Unknown4;                    // 0x10

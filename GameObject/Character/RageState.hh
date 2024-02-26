@@ -4,11 +4,9 @@
 class RageState : public GameSetObject
 {
 public:
-    unsigned int m_State;                               // 0x28
-    unsigned int mRageMeterAtMaxDontDecreaseTimer;      // 0x2C
-    unsigned int m_RageIntroTimer;                      // 0x30
-    unsigned int m_RageOutroTimer;                      // 0x34
-    unsigned int m_Unknown;                             // 0x38
+    unsigned int m_State;                               // 0x30
+    unsigned int mRageMeterAtMaxDontDecreaseTimer;      // 0x34
+    unsigned int m_RageIntroTimer;                      // 0x38
     float m_Tune_RageMeterMax;                          // 0x3C
     float m_Tune_RageMeterPulseLevel;                   // 0x40
     float m_Tune_RageOnDecay;                           // 0x44
