@@ -1,6 +1,6 @@
 //  Size:           0x2C
 
-class Vocal
+class SoundManager::Vocal
 {
 public:
 
