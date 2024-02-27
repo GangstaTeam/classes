@@ -16,9 +16,9 @@ public:
         CAMERASTATE_Debug,
         CAMERASTATE_Dead,
         CAMERASTATE_FixedDirection,
-        CAMERASTATE_NumStates,
+        CAMERASTATE_NumStates
     };
 
-    CameraStates mCameraState;     // 0x30
+    CameraStates mCameraState;                  // 0x30
     bool mTriggeredTargetLockSound;             // 0x34
 };
