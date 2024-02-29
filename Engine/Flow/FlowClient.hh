@@ -1,5 +1,4 @@
-//  Size:           0x4 + * Unknown *
-//  Total Size:     * Unknown *
+//  Size:           0x4
 
 class FlowClient
 {

@@ -6,6 +6,7 @@ class CharacterObject : public InventoryOwner
 public:
     int m_AlertStatus;                      // 0xAC
     int mFriendOrFoe;                       // 0xB0
+    CharacterTemplate* mCharacterTemplate;  // 0xB4
 
     int m_Health;                           // 0x15C
     int m_MaxHealth;                        // 0x160
@@ -27,4 +28,8 @@ public:
     PilotState m_PilotState;                // 0x2E8
 
     bool m_IsNISControlled;                 // 0x29D
+   
+    SharedInt mCurrentSampleFinishTime;     // 0x3A8
+
+    bool mHasSampleTimingInfoToAssign;      // 0x3B4
 };
