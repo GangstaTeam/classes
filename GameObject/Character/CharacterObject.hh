@@ -25,7 +25,7 @@ public:
     Character* m_CharacterEngineObject;     // 0x1AC
  
     WeaponState mWeaponState;               // 0x2AC
-    Swim m_SwimState;                       // 0x2DC
+    Swim mSwimState;                        // 0x2DC
     PilotState m_PilotState;                // 0x2E8
 
     bool m_IsNISControlled;                 // 0x29D
