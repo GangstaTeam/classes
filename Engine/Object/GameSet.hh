@@ -4,5 +4,5 @@
 class GameSet : public GameSetObject
 {
 public:
-
+    smVector m_ScriptObjects;                   // 0x30
 };
