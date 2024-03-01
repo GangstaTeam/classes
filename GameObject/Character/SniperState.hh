@@ -4,8 +4,15 @@
 class SniperState : public GameSetObject
 {
 public:
+    enum SniperZoom
+    {
+        SNIPERSTATE_None = 0x0,
+        SNIPERSTATE_1,
+        SNIPERSTATE_Count
+    };
+
     ScriptObjectPointer mCharacterCamera;       // 0x30
-    int mSniperState;                           // 0x34
+    SniperZoom mSniperState;                    // 0x34
     float mTune_FOV;                            // 0x38
     float mTune_MinFOV;                         // 0x3C
     float mTune_MaxFOV;                         // 0x40

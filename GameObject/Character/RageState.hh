@@ -4,7 +4,16 @@
 class RageState : public GameSetObject
 {
 public:
-    unsigned int m_State;                               // 0x30
+    enum RageStateEnum
+    {
+        RAGESTATE_None = 0x0,
+        RAGESTATE_Intro,
+        RAGESTATE_On,
+        RAGESTATE_On_StartFade,
+        RAGESTATE_Outro
+    };
+
+    RageStateEnum m_State;                              // 0x30
     unsigned int mRageMeterAtMaxDontDecreaseTimer;      // 0x34
     unsigned int m_RageIntroTimer;                      // 0x38
     float m_Tune_RageMeterMax;                          // 0x3C

@@ -8,6 +8,8 @@ public:
     int mFriendOrFoe;                       // 0xB0
     CharacterTemplate* mCharacterTemplate;  // 0xB4
 
+    CharacterContext* mCharacterContext;    // 0xF8
+
     int m_Health;                           // 0x15C
     int m_MaxHealth;                        // 0x160
 
