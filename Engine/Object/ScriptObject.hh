@@ -4,7 +4,7 @@
 class ScriptObject : public ConsoleObject
 {
 public:
-    const char *m_KeyStr;                       // 0x4
+    const char* m_Name;                         // 0x4
     char _Pad0x8[4];                            // 0x8
     core::Key m_Key;                            // 0xC
     void *m_UnknownPtr0;                        // 0x10
