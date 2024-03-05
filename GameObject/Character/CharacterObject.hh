@@ -68,27 +68,45 @@ public:
     uint32_t mVehicleCollidingWithID;                                       // 0x194  
     unsigned int mOnKilledVehicleID;                                        // 0x198
     int mDisabledCarState;                                                  // 0x19C
-
+    CVLoadObject* mCVLoadObject;                                            // 0x1A0
+    float mCachedDistanceFromCameraSqr;                                     // 0x1A4
+    unsigned int mVisualLODFlags;                                           // 0x1A8
     Character* mCharacterEngineObject;                                      // 0x1AC
- 
+    CharacterIntention mCharacterIntention;                                 // 0x1B0
+    IntentionArbitrator mIntentionArbitrator;                               // 0x26C
+    bool mDisabled;                                                         // 0x29C
+    bool mIsNISControlled;                                                  // 0x29D
+    CrouchState mCrouchState;                                               // 0x2A0
     WeaponState mWeaponState;                                               // 0x2AC
     Swim mSwimState;                                                        // 0x2DC
     PilotState m_PilotState;                                                // 0x2E8
-
-    bool mDisabled;                                                         // 0x29C
-    bool mIsNISControlled;                                                  // 0x29D
-   
+    GunUpState m_GunUpState;                                                // 0x380
+    SpeedController m_SpeedController;                                      // 0x388
+    IdleAnimationController m_IdleAnimationController;                      // 0x390
     bool mIsMidget;                                                         // 0x3A0
     bool m_SteppedInBlood;                                                  // 0x3A1   
     int m_NumStepsInBlood;                                                  // 0x3A4
     SharedInt mCurrentSampleFinishTime;                                     // 0x3A8
-
+    RDJElapsedTimer mLoopedConversationSafetyTimer;                         // 0x3AC
     bool mHasSampleTimingInfoToAssign;                                      // 0x3B4
-
+    bool mConversationCancellationMessageDue;                               // 0x3B5
+    bool mAlertStatusIsTimed;                                               // 0x3B6
+    int mPreviousAlertStatus;                                               // 0x3B8
+    int mTimedAlertStatusExpiry;                                            // 0x3BC
+    unsigned int mAttackingStartTime;                                       // 0x3C0
+    unsigned int mLastWeaponButtedTime;                                     // 0x3C4
     char mLimbsAvailability;                                                // 0x3C8
-    
-    ScriptObjectPointer<AICommandSequencer*> m_AICommandSequencer;          // 0x408
-    
+    CharacterLocomotionContextType mLocomotionContext;                      // 0x3CC
+    CharacterClass mCharacterClass;                                         // 0x3E0  
+    bool mRepeatTaskProcessRequested;                                       // 0x3D4
+    core::Key mVehicleAITaskName[6];                                        // 0x3D8
+    unsigned int mVehicleAITask[6];                                         // 0x3F0
+    ScriptObjectPointer<AICommandSequencer*> m_AICommandSequencer;          // 0x408 
+    unsigned char mTimeOfDayOnTime;                                         // 0x40C 
+    unsigned char mTimeOfDayOffTime;                                        // 0x40D 
+    unsigned int mFleeForCullingCmdSeqID;                                   // 0x410 
+    float mOverrideCullDistance;                                            // 0x414 
+    int mPaletteIndex;                                                      // 0x418   
     FightTreePhysicalMode mFightTreePhysicalMode;                           // 0x41C
     bool m_StatePropCollisionEnabled;                                       // 0x420
     bool mIsFadingForDelete;                                                // 0x421
@@ -101,4 +119,7 @@ public:
     bool mHasCustomTunables : 1;                                            // 0x423
     bool mCameraFadeOutFaded : 1;                                           // 0x423
     bool mIsMeleeAttacking : 1;                                             // 0x423
+    bool mIsNIS : 1;                                                        // 0x424         
+    DBKey mHealthPostKey;                                                   // 0x428
+    CharacterObjectCapability *mCapability;                                 // 0x42C
 };
