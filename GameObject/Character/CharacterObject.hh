@@ -25,11 +25,25 @@ public:
     float mDeadForTimer;                                                    // 0x10C
     unsigned char mSurfaceIndex;                                            // 0x110
     bool mDyingFinished;                                                    // 0x111
-
+    bool mImmuneToExecution;                                                // 0x112
+    bool mSetAmbientCollision;                                              // 0x113
+    bool m_UnknownBool_0x114;                                               // 0x114
+    CollidableHandle* mBulletCollisionHierarchy;                            // 0x118
+    unsigned int mSavedCollisionState;                                      // 0x11C
+    float m_HorizontalTranslationScale;                                     // 0x120
+    float m_VerticalTranslationScale;                                       // 0x124
+    float m_SpeedScale;                                                     // 0x128
+    float m_Animation360Weight;                                             // 0x12C
+    pure3d::Name m_ConversationType;                                        // 0x130
     pure3d::Name m_RequestedFightNodeName;                                  // 0x134
     pure3d::Name m_RequestedFightAnimationState;                            // 0x138
     float m_StartFrame;                                                     // 0x13C
-
+    int mMeleeDamage;                                                       // 0x140
+    EMeleeAttackType mMeleeAttackType;                                      // 0x144
+    EMeleeAttackType mMeleeIncomingAttackType;                              // 0x148
+    unsigned int mMeleeAttackID;                                            // 0x14C
+    EMeleeAttackDirection mMeleeAttackDirection;                            // 0x150
+    ScriptObjectPointer<CharacterObject*> mAttackerCharacterObject;         // 0x154
     int m_LimbObjectId;                                                     // 0x158
     int mHealth;                                                            // 0x15C
     int mMaxHealth;                                                         // 0x160
@@ -44,7 +58,7 @@ public:
     ESkeletonJoint m_DamageJoint;                                           // 0x178
     int m_DamageWeapon;                                                     // 0x17C
     int m_DamageDirection;                                                  // 0x180
-
+    unsigned int m_KillerID;                                                // 0x184
     bool mDisableCriticalHits;                                              // 0x188
     bool mDisableGetHitAnims;                                               // 0x189
     bool m_bHitByExplosionThisFrame;                                        // 0x18A
