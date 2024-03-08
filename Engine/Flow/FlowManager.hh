@@ -8,7 +8,7 @@ public:
     unsigned int m_Unknown1;                    // 0x28
     unsigned int m_GameTimeInMiliseconds;       // 0x2C
     unsigned int m_Unknown2;                    // 0x30
-    unsigned int m_Unknown3;                    // 0x34
+    unsigned int m_FrameCount;                  // 0x34
     unsigned int m_Unknown4;                    // 0x38
     unsigned int m_Unknown5;                    // 0x3C
     unsigned int m_Unknown6;                    // 0x40
