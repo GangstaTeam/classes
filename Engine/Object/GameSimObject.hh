@@ -4,7 +4,9 @@
 class GameSimObject : public GameObject
 {
 public:
-    char _Pad0x74[36];                          // 0x74
+    char _Pad0x74[28];                          // 0x74
+    ScriptObject *mSpawner;                     // 0x90
+    char _Pad0x98[4];                           // 0x94
     uint8_t m_SpawnUsage;                       // 0x98
     char _Pad0x99[11];                          // 0x99
     bool m_IsInvincible;                        // 0xA4
