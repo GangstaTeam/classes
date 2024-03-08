@@ -1,7 +1,7 @@
 //  Size:           0x3C
 //  Total Size:     0x4C
 
-class AIBehavior : public StateMachine
+class AICoverState : public StateMachine
 {
 public:
     AIBehavior* m_pAI;                                          // 0x10
