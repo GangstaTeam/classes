@@ -55,6 +55,7 @@ public:
     math::Vector mPositionWhenFacingWallLOSTestWasIssued;           // 0x1DC
     math::Vector2 mDirectionWhenFacingWallLOSTestWasIssued;         // 0x1E8
 
+    SmartPosition mAimLocation;                                     // 0x1FC
     unsigned int mHeadTrackingTime;                                 // 0x210
     math::Vector mHeadTrackLocation;                                // 0x214
     unsigned int mCrouchTime;                                       // 0x220
@@ -84,6 +85,8 @@ public:
     SpeedRequest mStrafeSpeed;                                      // 0x334
 
     int mTauntAnimationRequestID;                                   // 0x368
+
+    AICompoundStimulusTable mStimulusTable;                         // 0x388
 
     float mAverageMicrosecondsForUpdate;                            // 0x430
     unsigned char mDefaultBasePriority;                             // 0x434
