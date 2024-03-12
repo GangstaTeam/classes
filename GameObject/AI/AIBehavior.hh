@@ -99,6 +99,8 @@ public:
     unsigned int mDefaultBehaviourCmdSeqID;                         // 0x514
 
     AIAmbientGazeModule* mpAmbientGazeModule;                       // 0x528
+    int mGetClearTimer;                                             // 0x52C
+    RDJElapsedTimer mLastReactedToTonyTaunt;                        // 0x530
 
     bool mDisableSeparation;                                        // 0x540
     bool mAllowedToUse50Cal;                                        // 0x541
