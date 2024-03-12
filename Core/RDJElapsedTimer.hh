@@ -1,4 +1,4 @@
-//  Size:           0x558
+//  Size:           0x8
 
 class RDJElapsedTimer
 {
