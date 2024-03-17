@@ -3,14 +3,14 @@
 class FlowTime
 {
 public:   
-    unsigned int uMicroseconds;                 // 0x0
-    unsigned int uMilliseconds;                 // 0x4
-    float fMilliseconds;                        // 0x8
-    float fSeconds;                             // 0xC
-    unsigned int uRawMicroseconds;              // 0x10
-    unsigned int uRawMilliseconds;              // 0x14
-    float fRawMilliseconds;                     // 0x18
-    unsigned int fRawSeconds;                   // 0x1C
-    unsigned int m_uRawMilisecondsFraction;     // 0x20
-    unsigned int m_uMilisecondsFraction;        // 0x24
+    uint32_t uMicroseconds;                 // 0x0
+    uint32_t uMilliseconds;                 // 0x4
+    float fMilliseconds;                    // 0x8
+    float fSeconds;                         // 0xC
+    uint32_t uRawMicroseconds;              // 0x10
+    uint32_t uRawMilliseconds;              // 0x14
+    float fRawMilliseconds;                 // 0x18
+    uint32_t fRawSeconds;                   // 0x1C
+    uint32_t uRawMilisecondsFraction;       // 0x20
+    uint32_t uMilisecondsFraction;          // 0x24
 };
