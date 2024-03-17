@@ -5,9 +5,9 @@ class FlowManager
 {
 public:
     FlowTime m_FlowTime;                        // 0x0
-    uint32_t m_Unknown1;                        // 0x28
+    uint32_t m_TimeInMiliseconds;               // 0x28
     uint32_t m_GameTimeInMiliseconds;           // 0x2C
-    uint32_t m_Unknown2;                        // 0x30
+    uint32_t m_RawTimeInMiliseconds;            // 0x30
     uint32_t m_FrameCount;                      // 0x34
     uint32_t m_TimeInMicrosecond;               // 0x38
     uint32_t m_Unknown5;                        // 0x3C
