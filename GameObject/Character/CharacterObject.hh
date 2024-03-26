@@ -25,9 +25,9 @@ public:
     float mDeadForTimer;                                                    // 0x10C
     unsigned char mSurfaceIndex;                                            // 0x110
     bool mDyingFinished;                                                    // 0x111
-    bool mImmuneToExecution;                                                // 0x112
-    bool mSetAmbientCollision;                                              // 0x113
-    bool m_UnknownBool_0x114;                                               // 0x114
+    bool mIsDeadBody;                                                       // 0x112
+    bool mImmuneToExecution;                                                // 0x113
+    bool mSetAmbientCollision;                                              // 0x114
     CollidableHandle* mBulletCollisionHierarchy;                            // 0x118
     unsigned int mSavedCollisionState;                                      // 0x11C
     float m_HorizontalTranslationScale;                                     // 0x120
