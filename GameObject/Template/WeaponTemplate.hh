@@ -1,0 +1,69 @@
+//  Size:           0xE4
+//  Total Size:     0x108
+
+class WeaponTemplate : public Template
+{
+public:
+    int m_WeaponType;                          // 0x24
+    int m_FiringRate;                          // 0x28
+    int m_FiringCadence;                       // 0x2C
+    int m_AlternateFiringRate;                 // 0x30
+    int m_AlternateFiringCadence;              // 0x34
+    bool m_AutomaticFire;                      // 0x38
+    bool m_AutomaticAlternateFire;             // 0x39
+    bool m_RapidFire;                          // 0x3A
+    bool m_AllowedInCar;                       // 0x3B
+    bool m_AllowedInBoat;                      // 0x3C
+    bool m_AllowedInRage;                      // 0x3D
+    bool m_HasSecondaryFire;                   // 0x3E
+    int m_Damage;                              // 0x40
+    int m_ClipSize;                            // 0x44
+    int m_BurstSize;                           // 0x48
+    int m_TracerFrequency;                     // 0x4C
+    float m_BarrelCreepTimeUpMS;               // 0x50
+    float m_BarrelCreepReturnSpeed;            // 0x54
+    float m_BarrelCreepUpMin;                  // 0x58
+    float m_BarrelCreepUpMax;                  // 0x5C
+    float m_BarrelCreepSideMin;                // 0x60
+    float m_BarrelCreepSideMax;                // 0x64
+    char* mTrapezoidName_LockedTarget;         // 0x68
+    char* mTrapezoidName_LockedVehicleTarget;  // 0x6C
+    char* mTrapezoidName_ManualTarget;         // 0x70
+    char* mWeaponSoundName;                    // 0x74
+    char* mVibeName;                           // 0x78
+    math::Vector m_MeleePosition;              // 0x7C
+    float m_MeleeRadius;                       // 0x88
+    int m_MeleeDamage;                         // 0x8C
+    float mNPCMinWeaponRange;                  // 0x90
+    float mNPCMaxWeaponRange;                  // 0x94
+    float mNPCMaxWeaponRangeInVehicle;         // 0x98
+    float mNPCMinDesiredRange;                 // 0x9C
+    float mNPCMaxDesiredRange;                 // 0xA0
+    float mNPCAccuracyRangeMin;                // 0xA4
+    float mNPCAccuracyRangeMax;                // 0xA8
+    float mNPCSoundRadius;                     // 0xAC
+    float mAttachmentRadius;                   // 0xB0
+    float m_BulletRandomness;                  // 0xB4
+    float m_WeaponRange_FullDamage;            // 0xB8
+    float m_WeaponRange;                       // 0xBC
+    int8_t m_NPCPickupPriority;                // 0xC0
+    bool m_InfiniteAmmo;                       // 0xC1
+    bool m_Silenced;                           // 0xC2
+    int m_InvType;                             // 0xC4
+    bool m_InvIsWeapon;                        // 0xC8
+    char* m_AmmoType_Primary;                  // 0xCC
+    char* m_AmmoType_Secondary;                // 0xD0
+    char* m_WeaponPickupName;                  // 0xD4
+    char* m_TBE;                               // 0xD8
+    float m_Price;                             // 0xDC
+    float m_InvWeight;                         // 0xE0
+    float m_ShotgunTrapezoid_WidthBase;        // 0xE4
+    float m_ShotgunTrapezoid_WidthTop;         // 0xE8
+    float m_ShotgunTrapezoid_Length;           // 0xEC
+    float m_ShotgunTrapezoid_LengthFullDamage; // 0xF0
+    float m_ShotgunDamage;                     // 0xF4
+    char* mProjectileTemplateName;             // 0xF8
+    char* mSecondaryProjectileTemplateName;    // 0xFC
+    float mMaxExplosionRadius;                 // 0x100
+    int m_AlternateClipSize;                   // 0x104
+};
