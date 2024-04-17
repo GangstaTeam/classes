@@ -5,7 +5,7 @@ class Character
 public:
     CharacterObject* m_CharacterObject;             // 0x50
     math::Vector m_ForwardAxis;                     // 0x54
-    math::Matrix m_Matrix;                          // 0x60
+    math::Matrix m_Transform;                       // 0x60
 
     renderer::RenderableHandle *m_Renderable;       // 0xAC
  
