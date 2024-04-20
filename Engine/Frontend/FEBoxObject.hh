@@ -1,7 +1,7 @@
 //  Size:           0xC
 //  Total Size:     0x34
 
-class FETextObject : public FEObject
+class FEBoxObject : public FEObject
 {
 public:
     pure3d::frontend::Polygon *m_pPolygon;  // 0x28
