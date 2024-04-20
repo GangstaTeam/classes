@@ -7,6 +7,7 @@ public:
 
     char m_Path[256];                                   // 0x18
 
+    int m_State;                                        // 0x218
     Streamer m_Streamers[3];                            // 0x21C
    
     InventoryId m_InventoryId;                          // 0x268
