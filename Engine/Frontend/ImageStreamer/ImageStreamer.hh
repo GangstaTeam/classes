@@ -3,7 +3,7 @@
 class HUDImageStreamer
 {
 public:
-    container::ArrayDynamic m_Resources;                // 0x0
+    container::ArrayDynamic<char[32]> m_Resources;      // 0x0
 
     char m_Path[256];                                   // 0x18
 
