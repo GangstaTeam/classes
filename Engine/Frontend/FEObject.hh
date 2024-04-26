@@ -4,6 +4,6 @@
 class FEObject : public ScriptObject
 {
 public:
-    void* m_pData;                  // 0x20
-    bool m_UnknownBool_0x24;        // 0x24
+    pure3d::frontend::Drawable *m_pDrawable; // 0x20
+    bool m_UnknownBool_0x24;                 // 0x24
 };
