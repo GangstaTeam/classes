@@ -10,13 +10,13 @@ public:
     uint8_t m_SpawnUsage;                       // 0x98
     char _Pad0x99[11];                          // 0x99
     bool m_IsInvincible;                        // 0xA4
-    __int8 m_UnknownFlag0 : 1;                  // 0xA5
-    __int8 m_Visible : 1;                       // 0xA5
-    __int8 m_UnknownFlag2 : 1;                  // 0xA5
-    __int8 m_UnknownFlag3 : 1;                  // 0xA5
-    __int8 m_UnknownFlag4 : 1;                  // 0xA5
-    __int8 m_UnknownFlag5 : 1;                  // 0xA5
-    __int8 m_UnknownFlag6 : 1;                  // 0xA5
-    __int8 m_UnknownFlag7 : 1;                  // 0xA5
+    bool m_UnknownFlag0 : 1;                    // 0xA5
+    bool m_Visible : 1;                         // 0xA5
+    bool m_UnknownFlag2 : 1;                    // 0xA5
+    bool m_UnknownFlag3 : 1;                    // 0xA5
+    bool m_UnknownFlag4 : 1;                    // 0xA5
+    bool m_UnknownFlag5 : 1;                    // 0xA5
+    bool m_UnknownFlag6 : 1;                    // 0xA5
+    bool m_UnknownFlag7 : 1;                    // 0xA5
     char _Pad0xA6[2];                           // 0xA6
 };
