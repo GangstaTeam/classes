@@ -3,11 +3,17 @@
 class VehicleEngine
 {
 public:
-    CollidableHandle* m_CollidableHandle;               // 0x20
+    bool m_bCreated;                                        // 0x4
+    ScriptObjectPointer<GameObject*> m_GameObject;          // 0x8
 
-    ravenphysics::RigidBody* m_RigidBody;               // 0x28
+    renderer::RenderableHandle *m_pRenderableHandle;        // 0x14
+
+    CollidableHandle* m_pCollidableHandle;                  // 0x20
+    ravenphysics::CollisionObject* m_pCollisionObject;      // 0x24
+
+    ravenphysics::RigidBody* m_pRigidBody;                  // 0x28
     
-    VehicleZoneCollisionEngine* m_ZoneCollision;        // 0x504
+    VehicleZoneCollisionEngine* m_pZoneCollisionEngine;     // 0x504
 
-    bool m_IsPlayerControlled;                          // 0x5BA
+    bool m_bIsPlayerControlled;                             // 0x5BA
 };

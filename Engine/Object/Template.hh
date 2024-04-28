@@ -5,5 +5,5 @@ class Template : public ScriptObject
 {
 public:
     short m_UnknownShort_0x20;                  // 0x20
-    bool m_UnknownBool_0x22;                    // 0x24
+    bool m_bDataLoaded;                         // 0x24
 };
