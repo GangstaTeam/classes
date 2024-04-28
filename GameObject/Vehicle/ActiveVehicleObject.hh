@@ -44,7 +44,7 @@ public:
     bool mLocked;                                                                    // 0x63E
     float mDamageScale;                                                              // 0x640
     ESpawnType mSpawnType;                                                           // 0x644
-    ScriptObjectPointer<FireObject*  mFireObject;                                    // 0x648
+    ScriptObjectPointer<FireObject*> mFireObject;                                    // 0x648
     bool mHealthMeterDisplayEnabled;                                                 // 0x64C
     int mCurrentHealthState;                                                         // 0x650
     int mResetMotionHack;                                                            // 0x654
