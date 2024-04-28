@@ -1,7 +1,7 @@
 //  Size:           0x44
 //  Total Size:     0xEC
 
-class VehicleObject : GameSimObject
+class VehicleObject : public GameSimObject
 {
 public:
     bool mToBeCulled;                               // 0xA8
