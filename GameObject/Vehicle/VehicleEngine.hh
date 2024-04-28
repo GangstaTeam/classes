@@ -1,4 +1,4 @@
-//  Size: * Unknown*
+//  Size:           0x5D4
 
 class VehicleEngine
 {
