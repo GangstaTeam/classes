@@ -8,7 +8,7 @@ public:
 
     void* __LOSUpdateListenerVfptr;                                 // 0x20
     ScriptObjectPointer<GameSet*> mProjectileSet;                   // 0x24
-    unsigned int mCharacterID;                                      // 0x28
+    uint32_t mCharacterID;                                          // 0x28
     float mTunableAccuracy;                                         // 0x2C
     float mTunableAccuracyInVehicle;                                // 0x30
     float mTunableHitConeXRadius;                                   // 0x34
@@ -33,7 +33,7 @@ public:
     float mTunableSightDistance;                                    // 0x80
     ScriptObjectPointer<CharacterObject*> mCharacter;               // 0x84
     smVector<CharacterLOSInfo*> mCharacterLOSTable;                 // 0x88
-
+    ScriptObjectPointer<GameSet*> mBodyBag;                         // 0x98
     Path* mPath;                                                    // 0x9C
 
     int mPathProcessingTime;                                        // 0xCC
@@ -47,25 +47,25 @@ public:
     float mRandomLocomotionSpeedMultiplier;                         // 0x100
     math::Vector mLaggedMoveVector;                                 // 0x104
     math::Vector mMoveDirection;                                    // 0x110
-    unsigned int mPathfindFailedTimestamp;                          // 0x11C
+    uint32_t mPathfindFailedTimestamp;                              // 0x11C
     AIStrafeState mStrafeState;                                     // 0x120
     PedestrianNavigation* mpPedestrianNavigation;                   // 0x154
 
     int mFacingWallLOSTicket;                                       // 0x1D8
     math::Vector mPositionWhenFacingWallLOSTestWasIssued;           // 0x1DC
     math::Vector2 mDirectionWhenFacingWallLOSTestWasIssued;         // 0x1E8
-
+    math::Vector mWallNormal;                                       // 0x1F0
     SmartPosition mAimLocation;                                     // 0x1FC
-    unsigned int mHeadTrackingTime;                                 // 0x210
+    uint32_t mHeadTrackingTime;                                     // 0x210
     math::Vector mHeadTrackLocation;                                // 0x214
-    unsigned int mCrouchTime;                                       // 0x220
+    uint32_t mCrouchTime;                                           // 0x220
     ScriptObjectPointer<CharacterObject*> mEngageTarget;            // 0x224
-    unsigned int mEngageTargetAcquiredTimestamp;                    // 0x228
+    uint32_t mEngageTargetAcquiredTimestamp;                        // 0x228
     math::Vector mLastTargetPosition;                               // 0x22C
     math::Vector mLastTargetVelocity;                               // 0x238
     ScriptObjectPointer<CharacterObject*> mLastAttacker;            // 0x244
-    unsigned int mLastAttackTime;                                   // 0x248
-    unsigned int mTargetToEngageID;                                 // 0x24C
+    uint32_t mLastAttackTime;                                       // 0x248
+    uint32_t mTargetToEngageID;                                     // 0x24C
     ScriptObjectPointer<CharacterObject*> mTargetToEngage;          // 0x250
     ScriptObjectPointer<CharacterObject*> mMeleeAttackTarget;       // 0x254
     int mEngageInitialAnimation;                                    // 0x258
@@ -73,7 +73,7 @@ public:
     CharacterIntention::Button mFireButtonIndex;                    // 0x26C
     int mBurstFirePauseTime;                                        // 0x270
     float mMaxEngageDistance;                                       // 0x274
-    unsigned int mFireTimestamp;                                    // 0x278
+    uint32_t mFireTimestamp;                                        // 0x278
     math::Vector mFiredAtTargetPosition;                            // 0x27C
     math::Vector mLastErrorVec;                                     // 0x288
     float mAimMaxErrorAngleCos;                                     // 0x294
@@ -83,14 +83,27 @@ public:
     ScriptObjectPointer<GameObject*> mDestroyObject;                // 0x31C
     
     SpeedRequest mStrafeSpeed;                                      // 0x334
-
+    EDefendPositionState mDefendPositionState;                      // 0x33C
+    math::Vector mDefendPosition;                                   // 0x340
+    float mDefendRadius;                                            // 0x34C
+    uint32_t mMeleeAttackTimer;                                     // 0x350
+    uint32_t mDodgeMeleeTimer;                                      // 0x354
+    int mMeleeAnimationRequestID;                                   // 0x358
+    uint32_t mHandledIncomingMeleeAttackID;                         // 0x35C
+    int mDodgeWeaponTime;                                           // 0x360
+    uint32_t mRequestTauntTimestamp;                                // 0x364
     int mTauntAnimationRequestID;                                   // 0x368
-
+    uint32_t mDialogueDeliverTime;                                  // 0x36C
+    uint32_t mLastDialogueTime;                                     // 0x370
+    int mEngageDialogType;                                          // 0x374
+    ScriptObjectPointer<CharacterObject*> mThreatSource;            // 0x378
+    math::Vector mThreatPosition;                                   // 0x37C
     AICompoundStimulusTable mStimulusTable;                         // 0x388
+    AIStimulusEvent mStimulus;                                      // 0x39C
 
     float mAverageMicrosecondsForUpdate;                            // 0x430
-    unsigned char mDefaultBasePriority;                             // 0x434
-    unsigned char mBasePriority;                                    // 0x435
+    uint8_t mDefaultBasePriority;                                   // 0x434
+    uint8_t mBasePriority;                                          // 0x435
     int mLastFullUpdateTime;                                        // 0x438
     
     uint16_t mDecisionTreeIndex;                                    // 0x4D8
@@ -99,8 +112,9 @@ public:
     
     uint8_t mIdleBehaviour;                                         // 0x510
     uint8_t mCombatBehaviour;                                       // 0x511 
-    unsigned int mDefaultBehaviourCmdSeqID;                         // 0x514
+    uint32_t mDefaultBehaviourCmdSeqID;                             // 0x514
 
+    int mTimeLastIdentifiedTonyInFowardCone;                        // 0x524
     AIAmbientGazeModule* mpAmbientGazeModule;                       // 0x528
     int mGetClearTimer;                                             // 0x52C
     RDJElapsedTimer mLastReactedToTonyTaunt;                        // 0x530
