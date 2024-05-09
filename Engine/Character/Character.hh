@@ -17,6 +17,7 @@ public:
 
     ravenphysics::CollisionObject *m_pGroundCollisionObject;            // 0x114
 
+    SoundManager::SoundPlayerHandle* m_pSoundHandle;                    // 0x174
     CharacterAnimation* m_pCharacterAnimation;                          // 0x178
   
     math::Vector m_Translation;                                         // 0x1A4
