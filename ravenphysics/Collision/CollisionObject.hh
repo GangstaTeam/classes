@@ -11,4 +11,6 @@ public:
     ravenphysics::CollisionVolume** m_pVolumes;         // 0x24
 
     uint16_t m_nNumVolumes;                             // 0x30
+
+    NavMesh* m_pNavMesh;                                // 0x58
 };
