@@ -3,7 +3,8 @@
 class CharacterAnimation
 {
 public:
-    Character* m_CharacterEngine;                   // 0x8
+    Character* m_pCharacterEngine;                  // 0x8
+    pure3d::CharacterPose *m_pCharacterPose;        // 0xC
 
     math::Vector m_Velocity;                        // 0x10C
 
@@ -12,4 +13,6 @@ public:
     LocoRing m_LocomotionRing;                      // 0x170
 
     bool m_bIsLocomoting : 1;                       // 0x22C
+    // + 2
+    bool m_bIsAnimating : 1;                        // 0x22C
 };
