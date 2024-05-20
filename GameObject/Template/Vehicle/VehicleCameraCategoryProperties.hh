@@ -1,7 +1,7 @@
 //  Size:           0x7C
 //  Total Size:     0x9C
 
-class VehicleCameraProperties : public ScriptObject
+class VehicleCameraCategoryProperties : public ScriptObject
 {
 public:
     float mTune_RotationSmoothTime;          // 0x20
