@@ -22,7 +22,7 @@ public:
 
     SoundManager::SoundPlayerHandle* m_pSoundHandle;                    // 0x174
     CharacterAnimation* m_pCharacterAnimation;                          // 0x178
-  
+    CharacterFightTree *m_pMasterFightTree;                             // 0x17C
     PoseAttachmentCollection* m_pAttachments;                           // 0x180
 
     math::Vector m_vTranslation;                                        // 0x1A4
