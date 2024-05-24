@@ -16,10 +16,14 @@ public:
     float m_fHealth;                                        // 0x74
 
     ScriptObjectPointer<CharacterObject*> m_InputControl;   // 0x1A8
+    VehicleThrustState m_ThrustState;                       // 0x1AC
 
     PoseAttachmentCollection m_AttachmentCollection;        // 0x2AC
 
     VehicleZoneCollisionEngine* m_pZoneCollisionEngine;     // 0x504
+
+    VehicleBuoyancyState m_BuoyancyState;                   // 0x52C
+    pure3d::Ocean *m_pOcean;                                // 0x568
 
     bool m_bIsPlayerControlled;                             // 0x5BA
 };
