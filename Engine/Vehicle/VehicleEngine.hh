@@ -17,6 +17,7 @@ public:
 
     ScriptObjectPointer<CharacterObject*> m_InputControl;   // 0x1A8
     VehicleThrustState m_ThrustState;                       // 0x1AC
+    VehicleMotionState m_MotionState;                       // 0x1B8
 
     PoseAttachmentCollection m_AttachmentCollection;        // 0x2AC
 
