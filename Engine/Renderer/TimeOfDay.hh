@@ -5,5 +5,8 @@ class renderer::TimeOfDay
 public:
     uint32_t m_uMiliseconds;                // 0x30
   
-    bool m_bEnable;                         // 0x40
+    int m_iSpeed;                           // 0x3C
+    bool m_bIsUpdating;                     // 0x40
+
+    bool m_bIsRaining;                      // 0x44
 };
