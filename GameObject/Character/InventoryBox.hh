@@ -1,7 +1,7 @@
 //  Size:           0x8
 //  Total Size:     0x48
 
-class InventoryOwner : public GameGroup
+class InventoryBox : public GameGroup
 {
 public:
     int m_SlotCount;                 // 0x40
