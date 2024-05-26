@@ -3,6 +3,14 @@
 class Character
 {
 public:
+    enum EWorldCollisionOffset
+    {
+        WORLDCOLLISIONOFFSET_Disabled = 0,
+        WORLDCOLLISIONOFFSET_Rotated,
+        WORLDCOLLISIONOFFSET_Unrotated
+    };
+
+
     CharacterObject* m_pCharacterObject;                                // 0x50
     math::Vector m_vForwardAxis;                                        // 0x54
     math::Matrix m_Transform;                                           // 0x60
@@ -17,6 +25,8 @@ public:
 
     float m_fHeightAdjust;                                              // 0xF8
 
+    int m_iCollisionOffsetType;                                         // 0x100
+    math::Vector m_vCollisionOffset;                                    // 0x104
     uint16_t m_uCurrentGroundMeshTriIndex;                              // 0x110
     ravenphysics::CollisionObject* m_pGroundCollisionObject;            // 0x114
 
