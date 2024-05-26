@@ -10,7 +10,6 @@ public:
         WORLDCOLLISIONOFFSET_Unrotated
     };
 
-
     CharacterObject* m_pCharacterObject;                                // 0x50
     math::Vector m_vForwardAxis;                                        // 0x54
     math::Matrix m_Transform;                                           // 0x60
