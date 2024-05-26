@@ -4,6 +4,6 @@
 class RCObject : public GameSimObject
 {
 public:
-    renderer::RenderableHandle *mRenderable;        // 0xA8
-    void *m_UnknownPtr_0xAC;                        // 0xAC
+    renderer::RenderableHandle* m_pRenderable; // 0xA8
+    CollidableHandle* m_pCollidable;           // 0xAC
 };
