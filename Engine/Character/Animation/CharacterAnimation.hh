@@ -15,8 +15,13 @@ public:
     int m_iStatePriority;                           // 0x154
     int m_iRequestPriority;                         // 0x158
     int m_iRequestID;                               // 0x15C
+    Loco m_Locomotion;                              // 0x160
 
     LocoRing m_LocomotionRing;                      // 0x170
+    
+    math::Vector m_vLowerBodyDirection;             // 0x17C
+    
+    math::Vector m_vUpperBodyDirection;             // 0x1B0
 
     bool m_bIsLocomoting : 1;                       // 0x22C
     // + 2
