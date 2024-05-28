@@ -13,6 +13,7 @@ public:
     ravenphysics::CollisionObject* m_pCollisionObject;      // 0x24
     ravenphysics::RigidBody* m_pRigidBody;                  // 0x28
     
+    math::Matrix m_xTransform;                              // 0x34
     float m_fHealth;                                        // 0x74
     
     WheelFrictionState m_WheelFrictionState;                // 0x88

@@ -35,5 +35,8 @@ public:
     CharacterFightTree *m_pMasterFightTree;                             // 0x17C
     PoseAttachmentCollection* m_pAttachments;                           // 0x180
 
+    bool m_bVehicleCollisionEnabled : 1;                                // 0x198
+
     math::Vector m_vTranslation;                                        // 0x1A4
+
 };
