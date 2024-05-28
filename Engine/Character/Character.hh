@@ -15,6 +15,7 @@ public:
     math::Matrix m_Transform;                                           // 0x60
 
     renderer::RenderableHandle* m_pRenderable;                          // 0xAC
+    renderer::RenderableHandle* m_pShadowRenderable;                    // 0xB0
  
     CollidableHandle* m_pWorldCollidable;                               // 0xB8
     CollidableHandle* m_pObjectCollidable;                              // 0xBC
