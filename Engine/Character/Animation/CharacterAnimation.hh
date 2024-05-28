@@ -23,7 +23,13 @@ public:
     
     math::Vector m_vUpperBodyDirection;             // 0x1B0
 
-    bool m_bIsLocomoting : 1;                       // 0x22C
-    // + 2
-    bool m_bIsAnimating : 1;                        // 0x22C
+    bool m_bIsLocomoting : 1;                       // 0x22C (1)
+
+    bool m_bIsAnimating : 1;                        // 0x22C (4)
+
+    bool m_bUpperBodyRotationLocomotion : 1;        // 0x22C (128)
+
+    bool m_bUpperBodyRotationAnimation : 1;         // 0x22D (1)
+
+    bool m_bMotionRequestEnabled : 1;               // 0x22E (8)
 };
