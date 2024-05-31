@@ -104,7 +104,8 @@ public:
     math::Vector mThreatPosition;                                   // 0x37C
     AICompoundStimulusTable mStimulusTable;                         // 0x388
     AIStimulusEvent mStimulus;                                      // 0x39C
-
+    AIStaggeredStimulusQueue mStaggeredStimulusQueue;               // 0x3EC
+    container::ArrayDynamic mStimulusDetectors;                     // 0x420
     float mAverageMicrosecondsForUpdate;                            // 0x430
     uint8_t mDefaultBasePriority;                                   // 0x434
     uint8_t mBasePriority;                                          // 0x435
