@@ -69,7 +69,7 @@ public:
     ScriptObjectPointer<CharacterObject*> mTargetToEngage;          // 0x250
     ScriptObjectPointer<CharacterObject*> mMeleeAttackTarget;       // 0x254
     int mEngageInitialAnimation;                                    // 0x258
-
+    EnemyManager::AttackSlotInfo mAttackSlotInfo;                   // 0x25C
     CharacterIntention::Button mFireButtonIndex;                    // 0x26C
     int mBurstFirePauseTime;                                        // 0x270
     float mMaxEngageDistance;                                       // 0x274
@@ -77,7 +77,11 @@ public:
     math::Vector mFiredAtTargetPosition;                            // 0x27C
     math::Vector mLastErrorVec;                                     // 0x288
     float mAimMaxErrorAngleCos;                                     // 0x294
-    
+    int mWeaponToMountID;                                           // 0x298
+    int mWeaponToMountStartTime;                                    // 0x29C
+    float mDesiredAttackDistance;                                   // 0x2A0
+    float mHitsPerSecondMovAvg;                                     // 0x2A4
+    float mLastDesiredHitsPerSecond;                                // 0x2A8
     AICoverState mCoverState;                                       // 0x2AC
 
     ScriptObjectPointer<GameObject*> mDestroyObject;                // 0x31C
