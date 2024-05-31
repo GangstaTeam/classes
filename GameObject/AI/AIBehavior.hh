@@ -4,6 +4,33 @@
 class AIBehavior : public ScriptObject
 {
 public:
+    struct MoveAwayFromPositionData
+    {
+        bool active;                        // 0x0
+        bool movingDirectlyAndNotOnNavmesh; // 0x1
+        PathFindAwayParameters parameters;  // 0x4
+        float incrementalRequestedDistance; // 0x14
+        SmartPosition position;             // 0x18
+    };
+
+    struct WeaponPickupData
+    {
+        ScriptObjectPointer<WeaponPickup*> weapon; // 0x0
+        uint32_t moveStartTime;                    // 0x4
+        bool movingToWeapon;                       // 0x8
+        bool allowedToPickupWeapon;                // 0x9
+    };
+
+    struct WeaponRangeOverride
+    {
+        float fMin;          // 0x0
+        float fMax;          // 0x4
+        float fMaxInVehicle; // 0x8
+        float fMinDesired;   // 0xC
+        float fMaxDesired;   // 0x10
+        bool bActive;        // 0x14
+    };
+
     typedef void (*MoveToCompleteCallback)(void* userdata);
 
     void* __LOSUpdateListenerVfptr;                                 // 0x20
@@ -35,7 +62,7 @@ public:
     smVector<CharacterLOSInfo*> mCharacterLOSTable;                 // 0x88
     ScriptObjectPointer<GameSet*> mBodyBag;                         // 0x98
     Path* mPath;                                                    // 0x9C
-
+    MoveAwayFromPositionData mMoveAwayFromPosition;                 // 0xA0
     int mPathProcessingTime;                                        // 0xCC
     SpeedRequest mMoveSpeed;                                        // 0xD0
     float mMoveTolerance;                                           // 0xD8
@@ -50,7 +77,12 @@ public:
     uint32_t mPathfindFailedTimestamp;                              // 0x11C
     AIStrafeState mStrafeState;                                     // 0x120
     PedestrianNavigation* mpPedestrianNavigation;                   // 0x154
-
+    math::Vector mMoveStuckPrevPosition;                            // 0x158
+    math::Vector mMoveStuckDirection;                               // 0x164
+    float mMoveStuckPrevDistance;                                   // 0x170
+    int mMoveStuckTimestamp;                                        // 0x174
+    float mMoveStuckTolerance;                                      // 0x178
+    AISteeringAvoidanceState mSteeringAvoidanceState;               // 0x17C
     int mFacingWallLOSTicket;                                       // 0x1D8
     math::Vector mPositionWhenFacingWallLOSTestWasIssued;           // 0x1DC
     math::Vector2 mDirectionWhenFacingWallLOSTestWasIssued;         // 0x1E8
@@ -83,9 +115,12 @@ public:
     float mHitsPerSecondMovAvg;                                     // 0x2A4
     float mLastDesiredHitsPerSecond;                                // 0x2A8
     AICoverState mCoverState;                                       // 0x2AC
-
+    WeaponPickupData mWeaponPickupData;                             // 0x2F8
+    WeaponRangeOverride mWeaponRangeOverride;                       // 0x304
     ScriptObjectPointer<GameObject*> mDestroyObject;                // 0x31C
-    
+    float mDestroyObjectYOffset;                                    // 0x320
+    math::Vector mDestroyObjectFiringLocation;                      // 0x324
+    uint32_t mNextStrafeTime;                                       // 0x330
     SpeedRequest mStrafeSpeed;                                      // 0x334
     EDefendPositionState mDefendPositionState;                      // 0x33C
     math::Vector mDefendPosition;                                   // 0x340
@@ -114,16 +149,16 @@ public:
     uint16_t mDecisionTreeIndex;                                    // 0x4D8
     uint16_t mDecisionTreeTaskResult;                               // 0x4DA
     uint32_t mDecisionTreeRegisters[13];                            // 0x4DC
-    
     uint8_t mIdleBehaviour;                                         // 0x510
     uint8_t mCombatBehaviour;                                       // 0x511 
     uint32_t mDefaultBehaviourCmdSeqID;                             // 0x514
-
+    AIActionFactory mActionFactory;                                 // 0x518
+    AttitudeToTonyModule mAttitudeModule;                           // 0x51C
     int mTimeLastIdentifiedTonyInFowardCone;                        // 0x524
     AIAmbientGazeModule* mpAmbientGazeModule;                       // 0x528
     int mGetClearTimer;                                             // 0x52C
     RDJElapsedTimer mLastReactedToTonyTaunt;                        // 0x530
-
+    PanicVocalModule mPanicVocalModule;                             // 0x538
     bool mDisableSeparation;                                        // 0x540
     bool mAllowedToUse50Cal;                                        // 0x541
     int mPathNodeIndex : 8;                                         // 0x544
