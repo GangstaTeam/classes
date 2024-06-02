@@ -8,6 +8,8 @@ public:
 
     math::Vector m_Velocity;                        // 0x10C
 
+    pure3d::Skeleton* m_pSkeleton;                  // 0x13C
+
     pure3d::Name m_UpperBodyStateName;              // 0x144
     pure3d::Name m_AnimationStateName;              // 0x148
     pure3d::Name m_LocomotionTypeName;              // 0x14C
