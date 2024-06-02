@@ -35,6 +35,8 @@ public:
     CharacterFightTree *m_pMasterFightTree;                             // 0x17C
     PoseAttachmentCollection* m_pAttachments;                           // 0x180
 
+    container::ArrayDynamic<uint8_t>* m_pJointEnumToIndex;              // 0x190
+
     bool m_bVehicleCollisionEnabled : 1;                                // 0x198 (2)
 
     bool m_bGroundCollisionEnabled : 1;                                 // 0x198 (16)
