@@ -27,6 +27,8 @@ public:
 
     bool m_bIsAnimating : 1;                        // 0x22C (4)
 
+    bool m_bUpperBodyFacing : 1;                    // 0x22C (32)
+
     bool m_bUpperBodyRotationLocomotion : 1;        // 0x22C (128)
 
     bool m_bUpperBodyRotationAnimation : 1;         // 0x22D (1)
