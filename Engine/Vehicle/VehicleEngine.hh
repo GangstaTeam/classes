@@ -3,6 +3,12 @@
 class VehicleEngine
 {
 public:
+    enum EVehicleDestructionState
+    {
+        VEHICLEDESTRUCTIONSTATE_BURNING = 3,
+        VEHICLEDESTRUCTIONSTATE_DESTROYED
+    };
+
     bool m_bCreated;                                        // 0x4
     ScriptObjectPointer<GameObject*> m_GameObject;          // 0x8
 
@@ -16,6 +22,9 @@ public:
     math::Matrix m_xTransform;                              // 0x34
     float m_fHealth;                                        // 0x74
     
+    float m_fBodyDamageScale;                               // 0x7C
+    float m_fWheelDamageScale;                              // 0x80
+
     WheelFrictionState m_WheelFrictionState;                // 0x88
     WheelFrictionState m_WheelFrictionState2;               // 0x108
 
@@ -24,11 +33,17 @@ public:
     VehicleMotionState m_MotionState;                       // 0x1B8
 
     PoseAttachmentCollection m_AttachmentCollection;        // 0x2AC
+    bool m_bSirenEnabled;                                   // 0x474
+    bool m_bHornEnabled;                                    // 0x475
 
+    IVehicleSirenListener* m_pSirenListener;                // 0x478
+    
     VehicleZoneCollisionEngine* m_pZoneCollisionEngine;     // 0x504
 
     VehicleBuoyancyState m_BuoyancyState;                   // 0x52C
     pure3d::Ocean *m_pOcean;                                // 0x568
+
+    EVehicleDestructionState m_DestructionState;            // 0x578
 
     bool m_bIsPlayerControlled;                             // 0x5BA
 };
