@@ -21,7 +21,7 @@ public:
     
     math::Matrix m_xTransform;                              // 0x34
     float m_fHealth;                                        // 0x74
-    
+    float m_fHealthCallbackThresholdPercent;                // 0x78
     float m_fBodyDamageScale;                               // 0x7C
     float m_fWheelDamageScale;                              // 0x80
 
