@@ -3,5 +3,7 @@
 class HelicopterEngine
 {
 public:
-    VehicleEngine* mVehicleEngine;                  // 0x0
+    VehicleEngine* m_pVehicleEngine;                    // 0x0
+
+    HelicopterIntenion m_Intention;                     // 0x8
 };
