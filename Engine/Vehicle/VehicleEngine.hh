@@ -11,6 +11,8 @@ public:
 
     bool m_bCreated;                                        // 0x4
     ScriptObjectPointer<GameObject*> m_GameObject;          // 0x8
+    
+    bool m_bVisible;                                        // 0x11
 
     renderer::RenderableHandle *m_pRenderableHandle;        // 0x14
   
@@ -31,7 +33,9 @@ public:
     ScriptObjectPointer<CharacterObject*> m_InputControl;   // 0x1A8
     VehicleThrustState m_ThrustState;                       // 0x1AC
     VehicleMotionState m_MotionState;                       // 0x1B8
+    VehicleCruiseControlState m_CruiseControlState;         // 0x254
 
+    VehicleLocomotion* m_pLocomotion;                       // 0x2A8
     PoseAttachmentCollection m_AttachmentCollection;        // 0x2AC
     bool m_bSirenEnabled;                                   // 0x474
     bool m_bHornEnabled;                                    // 0x475
