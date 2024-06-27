@@ -1,6 +1,6 @@
 //  Size:           0x10
 
-class HelicopterIntenion
+class HelicopterIntention
 {
 public:
     float m_fSteeringFactor;       // 0x0
