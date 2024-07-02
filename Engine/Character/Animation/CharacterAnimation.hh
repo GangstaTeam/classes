@@ -3,6 +3,7 @@
 class CharacterAnimation
 {
 public:
+    CharacterAnimationTunables* m_pTunables;        // 0x4
     Character* m_pCharacterEngine;                  // 0x8
     pure3d::CharacterPose *m_pCharacterPose;        // 0xC
 
