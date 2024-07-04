@@ -35,6 +35,6 @@ public:
     bool mCanShootFromVehicle;                                                             // 0xCD
     char* mSoundName;                                                                      // 0xD0
     CVLoadObject* mRequiredDriver;                                                         // 0xD4
-    VehicleWaterSprayLocatorAttributes mWaterSprayLocatorAttributes;                       // 0xD8 (Need confirmation)
-    VehicleExhaustLocatorAttributes mExhaustLocatorAttributes;                             // 0xE4 (Need confirmation)
+    VehicleWaterSprayLocatorAttributes mWaterSprayLocatorAttributes;                       // 0xD8
+    VehicleExhaustLocatorAttributes mExhaustLocatorAttributes;                             // 0xE4
 };
