@@ -34,9 +34,6 @@ public:
     float m_fBodyDamageScale;                               // 0x7C
     float m_fWheelDamageScale;                              // 0x80
 
-    WheelFrictionState m_WheelFrictionState;                // 0x88
-    WheelFrictionState m_WheelFrictionState2;               // 0x108
-
     ScriptObjectPointer<CharacterObject*> m_InputControl;   // 0x1A8
     VehicleThrustState m_ThrustState;                       // 0x1AC
     VehicleMotionState m_MotionState;                       // 0x1B8
