@@ -4,8 +4,10 @@
 class GameSimObject : public GameObject
 {
 public:
-
-    ScriptObject *mSpawner;                     // 0x90
+    math::Vector m_vSpawnPosition;              // 0x74
+    math::Vector m_vSpawnDirection;             // 0x80
+    float m_fSpawnRoll;                         // 0x8C
+    SpawnObject *mSpawner;                      // 0x90
 
     uint8_t m_SpawnUsage;                       // 0x98
 
